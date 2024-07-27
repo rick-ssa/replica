@@ -7,41 +7,36 @@ import { SiYoutubeshorts } from "react-icons/si"
 import { MdSubscriptions, MdOutlineSubscriptions } from "react-icons/md"
 
 export const MenuInicio = () => {
-    const [inicioActive, setInicioActive] = useState<boolean>(false)
-    const [shortsActive, setShortsActive] = useState<boolean>(false)
-    const [inscricoesActive, setInscricoesActive] = useState<boolean>(false)
+    const [active, setActive] = useState<boolean[]>([false, false, false])
 
     const handleActive = (index: number) => {
-        const dispatchs = [
-            setInicioActive,
-            setShortsActive,
-            setInscricoesActive,
-        ]
-        dispatchs.forEach((dispatch, dispatchIndex) =>
-            dispatch(dispatchIndex === index)
+        const newActive = active.map(
+            (_, dispatchIndex) => dispatchIndex === index
         )
+
+        setActive(newActive)
     }
 
     const menuItems: ItemMenu[] = [
         {
-            text: "Início",
+            text: "home",
             icon: <GoHomeFill />,
             iconInactive: <GoHome />,
-            active: inicioActive,
+            active: active[0],
             onClick: () => handleActive(0),
         },
         {
             text: "Shorts",
             icon: <SiYoutubeshorts />,
             iconInactive: <SiYoutubeshorts />,
-            active: shortsActive,
+            active: active[1],
             onClick: () => handleActive(1),
         },
         {
-            text: "Inscrições",
+            text: "subscriptions",
             icon: <MdSubscriptions />,
             iconInactive: <MdOutlineSubscriptions />,
-            active: inscricoesActive,
+            active: active[2],
             onClick: () => handleActive(2),
         },
     ]
