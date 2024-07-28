@@ -27,6 +27,7 @@ export const MenuYou = () => {
 
     const menuItems: ItemMenu[] = [
         {
+            id: "you-1",
             text: ">",
             icon: <span className="font-semibold text-sm capitalize">you</span>,
             iconInactive: (
@@ -36,6 +37,7 @@ export const MenuYou = () => {
             onClick: () => handleActive(0),
         },
         {
+            id: "you-2",
             text: "your channel",
             icon: <PiUserSquareBold />,
             iconInactive: <PiUserSquare />,
@@ -43,6 +45,7 @@ export const MenuYou = () => {
             onClick: () => handleActive(1),
         },
         {
+            id: "you-3",
             text: "History",
             icon: <GoHistory className="font-bold" />,
             iconInactive: <GoHistory />,
@@ -50,6 +53,7 @@ export const MenuYou = () => {
             onClick: () => handleActive(2),
         },
         {
+            id: "you-4",
             text: "Playlist",
             icon: <MdPlaylistPlay />,
             iconInactive: <MdOutlinePlaylistPlay />,
@@ -57,6 +61,7 @@ export const MenuYou = () => {
             onClick: () => handleActive(3),
         },
         {
+            id: "you-5",
             text: "Your videos",
             icon: <CgPlayButtonR />,
             iconInactive: <CgPlayButtonR />,
@@ -64,6 +69,7 @@ export const MenuYou = () => {
             onClick: () => handleActive(4),
         },
         {
+            id: "you-6",
             text: "Your movies",
             icon: <BiSolidMoviePlay />,
             iconInactive: <BiMoviePlay />,
@@ -71,6 +77,7 @@ export const MenuYou = () => {
             onClick: () => handleActive(5),
         },
         {
+            id: "you-7",
             text: "watch later",
             icon: <MdWatchLater />,
             iconInactive: <MdOutlineWatchLater />,
@@ -78,6 +85,7 @@ export const MenuYou = () => {
             onClick: () => handleActive(6),
         },
         {
+            id: "you-8",
             text: "thumbup videos",
             icon: <RiThumbUpFill />,
             iconInactive: <RiThumbUpLine />,

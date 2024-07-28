@@ -4,7 +4,7 @@ import { ReactNode } from "react"
 interface MenuItemProps {
     active?: boolean
     onClick?: () => void
-    text: string
+    text: ReactNode
     icon: ReactNode
     iconInactive: ReactNode
 }
@@ -36,7 +36,7 @@ export const MenuItem = ({
             <span className="text-xl w-12">{active ? icon : iconInactive}</span>
             <span
                 className={
-                    "capitalize text-sm select-none " +
+                    "capitalize text-sm select-none flex flex-1 " +
                     (active ? "font-semibold " : "")
                 }
             >

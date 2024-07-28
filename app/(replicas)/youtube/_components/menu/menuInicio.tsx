@@ -19,6 +19,7 @@ export const MenuInicio = () => {
 
     const menuItems: ItemMenu[] = [
         {
+            id: "home-1",
             text: "home",
             icon: <GoHomeFill />,
             iconInactive: <GoHome />,
@@ -26,6 +27,7 @@ export const MenuInicio = () => {
             onClick: () => handleActive(0),
         },
         {
+            id: "home-2",
             text: "Shorts",
             icon: <SiYoutubeshorts />,
             iconInactive: <SiYoutubeshorts />,
@@ -33,6 +35,7 @@ export const MenuInicio = () => {
             onClick: () => handleActive(1),
         },
         {
+            id: "home-3",
             text: "subscriptions",
             icon: <MdSubscriptions />,
             iconInactive: <MdOutlineSubscriptions />,
