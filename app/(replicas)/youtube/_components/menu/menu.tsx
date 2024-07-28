@@ -20,9 +20,9 @@ export const Menu = ({
     return (
         <ul className="border-b flex-1 justify-start py-3 pr-3 pl-1 flex-col">
             {title && (
-                <span className="flex capitalize font-semibold ml-4 mb-3">
+                <li className="flex capitalize font-semibold ml-4 mb-3">
                     {title}
-                </span>
+                </li>
             )}
             {items.map((item) => (
                 <MenuItem

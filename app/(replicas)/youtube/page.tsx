@@ -1,3 +1,4 @@
+import { MenuExplore } from "./_components/menu/menuExplore"
 import { MenuInicio } from "./_components/menu/menuInicio"
 import { MenuSubscription } from "./_components/menu/menuSubscription"
 import { MenuYou } from "./_components/menu/menuYou"
@@ -8,6 +9,7 @@ export default function YoutubePage() {
             <MenuInicio />
             <MenuYou />
             <MenuSubscription />
+            <MenuExplore />
         </div>
     )
 }
