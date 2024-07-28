@@ -6,7 +6,7 @@ interface AvatarProps {
 }
 export const Avatar = ({ src, alt }: AvatarProps) => {
     return (
-        <img
+        <Image
             className="rounded-full"
             src={src}
             alt={alt}
