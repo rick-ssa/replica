@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ItemMenu, Menu } from "./menu"
+import { ItemMenu, Menu } from "../menu/menu"
 import { AiFillFire, AiOutlineFire } from "react-icons/ai"
 import {
     PiMusicNote,
@@ -17,7 +17,6 @@ import {
     IoTrophyOutline,
 } from "react-icons/io5"
 import { MdPodcasts, MdOutlinePodcasts } from "react-icons/md"
-import { CgPlayButtonR } from "react-icons/cg"
 import { BiMoviePlay, BiSolidMoviePlay } from "react-icons/bi"
 import {
     RiShoppingBag4Fill,

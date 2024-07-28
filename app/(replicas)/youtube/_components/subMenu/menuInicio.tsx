@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ItemMenu, Menu } from "./menu"
+import { ItemMenu, Menu } from "../menu/menu"
 import { GoHome, GoHomeFill } from "react-icons/go"
 import { SiYoutubeshorts } from "react-icons/si"
 import { MdSubscriptions, MdOutlineSubscriptions } from "react-icons/md"

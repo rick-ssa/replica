@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 import { Avatar } from "../avatar"
-import { ItemMenu, Menu } from "./menu"
+import { ItemMenu, Menu } from "../menu/menu"
 import { FiRadio } from "react-icons/fi"
 
 const getUsers = async () => {

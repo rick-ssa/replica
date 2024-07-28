@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ItemMenu, Menu } from "./menu"
+import { ItemMenu, Menu } from "../menu/menu"
 import {
     SiYoutube,
     SiYoutubekids,

@@ -1,8 +1,9 @@
-import { MenuExplore } from "./_components/menu/menuExplore"
-import { MenuInicio } from "./_components/menu/menuInicio"
-import { MenuMore } from "./_components/menu/menuMore"
-import { MenuSubscription } from "./_components/menu/menuSubscription"
-import { MenuYou } from "./_components/menu/menuYou"
+import { MenuConfig } from "./_components/subMenu/menuConfig"
+import { MenuExplore } from "./_components/subMenu/menuExplore"
+import { MenuInicio } from "./_components/subMenu/menuInicio"
+import { MenuMore } from "./_components/subMenu/menuMore"
+import { MenuSubscription } from "./_components/subMenu/menuSubscription"
+import { MenuYou } from "./_components/subMenu/menuYou"
 
 export default function YoutubePage() {
     return (
@@ -12,6 +13,7 @@ export default function YoutubePage() {
             <MenuSubscription />
             <MenuExplore />
             <MenuMore />
+            <MenuConfig />
         </div>
     )
 }
