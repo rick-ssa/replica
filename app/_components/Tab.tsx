@@ -4,8 +4,8 @@ import { usePathname } from "next/navigation"
 import { ReactNode } from "react"
 
 const links = [
-    { link: "/netflix", label: "Netflix" },
     { link: "/youtube", label: "Youtube" },
+    { link: "/netflix", label: "Netflix" },
 ]
 
 export const Tab = ({ children }: { children: ReactNode }) => {
