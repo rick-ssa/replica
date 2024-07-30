@@ -23,6 +23,8 @@ export const Tab = ({ children }: { children: ReactNode }) => {
                         <Link
                             className={
                                 "w-20 " +
+                                "mr-1 " +
+                                "last:mr-0 " +
                                 "flex items-center justify-center " +
                                 " border-r-blue-500 " +
                                 "rounded-t-md " +

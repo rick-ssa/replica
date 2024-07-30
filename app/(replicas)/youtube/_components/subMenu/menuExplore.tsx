@@ -39,7 +39,7 @@ export const MenuExplore = () => {
     const menuItems: ItemMenu[] = [
         {
             id: "explore-1",
-            text: "hot",
+            text: "trending",
             icon: <AiFillFire />,
             iconInactive: <AiOutlineFire />,
             active: active[0],
@@ -79,7 +79,7 @@ export const MenuExplore = () => {
         },
         {
             id: "explore-6",
-            text: "games",
+            text: "gaming",
             icon: <IoGameController />,
             iconInactive: <IoGameControllerOutline />,
             active: active[5],
