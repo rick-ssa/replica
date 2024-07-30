@@ -3,16 +3,7 @@ import { Avatar } from "../avatar"
 import { ItemMenu, Menu } from "../menu/menu"
 import { FiRadio } from "react-icons/fi"
 
-const getUsers = async () => {
-    const users = await (
-        await fetch("https://randomuser.me/api/?results=10")
-    ).json()
-    return users
-}
-
-export const MenuSubscription = async () => {
-    const response = await getUsers()
-    const users = response.results
+export const MenuSubscription = ({ users }: { users: any }) => {
     const items: ItemMenu[] = users.map(
         (user: any, index: number): ItemMenu => {
             let Text

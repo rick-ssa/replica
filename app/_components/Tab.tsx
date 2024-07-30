@@ -36,7 +36,7 @@ export const Tab = ({ children }: { children: ReactNode }) => {
                     )
                 })}
             </nav>
-            <div className="flex flex-1">{children}</div>
+            <div className="realtive flex-1 flex">{children}</div>
         </div>
     )
 }
