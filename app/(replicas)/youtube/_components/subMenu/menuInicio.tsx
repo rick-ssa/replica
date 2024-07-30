@@ -1,5 +1,3 @@
-"use client"
-
 import { ItemMenu, Menu } from "../menu/menu"
 import { GoHome, GoHomeFill } from "react-icons/go"
 import { SiYoutubeshorts } from "react-icons/si"

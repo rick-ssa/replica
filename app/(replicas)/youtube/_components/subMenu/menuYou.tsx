@@ -1,6 +1,3 @@
-"use client"
-
-import { useState } from "react"
 import { ItemMenu, Menu } from "../menu/menu"
 import { PiUserSquare, PiUserSquareBold } from "react-icons/pi"
 import { GoHistory } from "react-icons/go"

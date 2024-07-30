@@ -1,5 +1,3 @@
-"use client"
-
 import { ItemMenu, Menu } from "../menu/menu"
 import { AiFillFire, AiOutlineFire } from "react-icons/ai"
 import {
