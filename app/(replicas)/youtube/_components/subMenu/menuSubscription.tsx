@@ -10,7 +10,9 @@ export const MenuSubscription = ({ users }: { users: any }) => {
                 case 0:
                     Text = (
                         <span className="flex flex-1 items-center justify-between">
-                            {user.login.username}
+                            <span className="max-w-28 truncate">
+                                {user.login.username}
+                            </span>
                             <FiRadio color="red" />
                         </span>
                     )
@@ -20,8 +22,10 @@ export const MenuSubscription = ({ users }: { users: any }) => {
                 case 5:
                     Text = (
                         <span className="flex flex-1 items-center justify-between">
-                            {user.login.username}
-                            <span className="relative flex w-1 h-1 rounded-full bg-blue-600" />
+                            <span className="max-w-28 truncate">
+                                {user.login.username}
+                            </span>
+                            <span className="relative mx-2 flex w-1 h-1 rounded-full bg-blue-600" />
                         </span>
                     )
                     break
