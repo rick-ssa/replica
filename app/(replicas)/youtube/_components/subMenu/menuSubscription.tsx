@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import { Avatar } from "../avatar"
 import { ItemMenu, Menu } from "../menu/menu"
 import { FiRadio } from "react-icons/fi"
@@ -48,9 +47,5 @@ export const MenuSubscription = ({ users }: { users: any }) => {
             }
         }
     )
-    return (
-        <Suspense fallback={"loading..."}>
-            <Menu items={items} title="subscriptions" />
-        </Suspense>
-    )
+    return <Menu items={items} title="subscriptions" />
 }
