@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { ItemMenu, Menu } from "../menu/menu"
 import { AiFillFire, AiOutlineFire } from "react-icons/ai"
 import {
@@ -25,17 +24,13 @@ import {
     RiNewsLine,
 } from "react-icons/ri"
 
-export const MenuExplore = () => {
-    const [active, setActive] = useState<boolean[]>(new Array(10).fill(false))
-
-    const handleActive = (index: number) => {
-        const newActive = active.map(
-            (_, dispatchIndex) => dispatchIndex === index
-        )
-
-        setActive(newActive)
-    }
-
+export const MenuExplore = ({
+    active,
+    handleActive,
+}: {
+    active: boolean[]
+    handleActive: (arrayIndex: number, index: number) => void
+}) => {
     const menuItems: ItemMenu[] = [
         {
             id: "explore-1",
@@ -43,7 +38,7 @@ export const MenuExplore = () => {
             icon: <AiFillFire />,
             iconInactive: <AiOutlineFire />,
             active: active[0],
-            onClick: () => handleActive(0),
+            onClick: () => handleActive(3, 0),
         },
         {
             id: "explore-2",
@@ -51,7 +46,7 @@ export const MenuExplore = () => {
             icon: <RiShoppingBag4Fill />,
             iconInactive: <RiShoppingBag4Line />,
             active: active[1],
-            onClick: () => handleActive(1),
+            onClick: () => handleActive(3, 1),
         },
         {
             id: "explore-3",
@@ -59,7 +54,7 @@ export const MenuExplore = () => {
             icon: <PiMusicNoteFill />,
             iconInactive: <PiMusicNote />,
             active: active[2],
-            onClick: () => handleActive(2),
+            onClick: () => handleActive(3, 2),
         },
         {
             id: "explore-4",
@@ -67,7 +62,7 @@ export const MenuExplore = () => {
             icon: <BiSolidMoviePlay />,
             iconInactive: <BiMoviePlay />,
             active: active[3],
-            onClick: () => handleActive(3),
+            onClick: () => handleActive(3, 3),
         },
         {
             id: "explore-5",
@@ -75,7 +70,7 @@ export const MenuExplore = () => {
             icon: <FiRadio />,
             iconInactive: <FiRadio />,
             active: active[4],
-            onClick: () => handleActive(4),
+            onClick: () => handleActive(3, 4),
         },
         {
             id: "explore-6",
@@ -83,7 +78,7 @@ export const MenuExplore = () => {
             icon: <IoGameController />,
             iconInactive: <IoGameControllerOutline />,
             active: active[5],
-            onClick: () => handleActive(5),
+            onClick: () => handleActive(3, 5),
         },
         {
             id: "explore-7",
@@ -91,7 +86,7 @@ export const MenuExplore = () => {
             icon: <RiNewsFill />,
             iconInactive: <RiNewsLine />,
             active: active[6],
-            onClick: () => handleActive(6),
+            onClick: () => handleActive(3, 6),
         },
         {
             id: "explore-8",
@@ -99,7 +94,7 @@ export const MenuExplore = () => {
             icon: <IoTrophy />,
             iconInactive: <IoTrophyOutline />,
             active: active[7],
-            onClick: () => handleActive(7),
+            onClick: () => handleActive(3, 7),
         },
         {
             id: "explore-9",
@@ -107,7 +102,7 @@ export const MenuExplore = () => {
             icon: <PiLightbulbBold />,
             iconInactive: <PiLightbulb />,
             active: active[8],
-            onClick: () => handleActive(8),
+            onClick: () => handleActive(3, 8),
         },
         {
             id: "explore-10",
@@ -115,7 +110,7 @@ export const MenuExplore = () => {
             icon: <MdPodcasts />,
             iconInactive: <MdOutlinePodcasts />,
             active: active[9],
-            onClick: () => handleActive(9),
+            onClick: () => handleActive(3, 9),
         },
     ]
     return <Menu items={menuItems} title="Explore" />

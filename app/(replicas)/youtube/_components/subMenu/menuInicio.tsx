@@ -1,22 +1,17 @@
 "use client"
 
-import { useState } from "react"
 import { ItemMenu, Menu } from "../menu/menu"
 import { GoHome, GoHomeFill } from "react-icons/go"
 import { SiYoutubeshorts } from "react-icons/si"
 import { MdSubscriptions, MdOutlineSubscriptions } from "react-icons/md"
 
-export const MenuInicio = () => {
-    const [active, setActive] = useState<boolean[]>([false, false, false])
-
-    const handleActive = (index: number) => {
-        const newActive = active.map(
-            (_, dispatchIndex) => dispatchIndex === index
-        )
-
-        setActive(newActive)
-    }
-
+export const MenuInicio = ({
+    active,
+    handleActive,
+}: {
+    active: boolean[]
+    handleActive: (arrayIndex: number, index: number) => void
+}) => {
     const menuItems: ItemMenu[] = [
         {
             id: "home-1",
@@ -24,7 +19,7 @@ export const MenuInicio = () => {
             icon: <GoHomeFill />,
             iconInactive: <GoHome />,
             active: active[0],
-            onClick: () => handleActive(0),
+            onClick: () => handleActive(0, 0),
         },
         {
             id: "home-2",
@@ -32,7 +27,7 @@ export const MenuInicio = () => {
             icon: <SiYoutubeshorts />,
             iconInactive: <SiYoutubeshorts />,
             active: active[1],
-            onClick: () => handleActive(1),
+            onClick: () => handleActive(0, 1),
         },
         {
             id: "home-3",
@@ -40,7 +35,7 @@ export const MenuInicio = () => {
             icon: <MdSubscriptions />,
             iconInactive: <MdOutlineSubscriptions />,
             active: active[2],
-            onClick: () => handleActive(2),
+            onClick: () => handleActive(0, 2),
         },
     ]
     return <Menu items={menuItems} />

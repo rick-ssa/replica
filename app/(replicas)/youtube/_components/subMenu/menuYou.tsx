@@ -14,17 +14,13 @@ import { CgPlayButtonR } from "react-icons/cg"
 import { BiMoviePlay, BiSolidMoviePlay } from "react-icons/bi"
 import { RiThumbUpLine, RiThumbUpFill } from "react-icons/ri"
 
-export const MenuYou = () => {
-    const [active, setActive] = useState<boolean[]>(new Array(8).fill(false))
-
-    const handleActive = (index: number) => {
-        const newActive = active.map(
-            (_, dispatchIndex) => dispatchIndex === index
-        )
-
-        setActive(newActive)
-    }
-
+export const MenuYou = ({
+    active,
+    handleActive,
+}: {
+    active: boolean[]
+    handleActive: (arrayIndex: number, index: number) => void
+}) => {
     const menuItems: ItemMenu[] = [
         {
             id: "you-1",
@@ -34,7 +30,7 @@ export const MenuYou = () => {
                 <span className="font-semibold text-sm capitalize">you</span>
             ),
             active: active[0],
-            onClick: () => handleActive(0),
+            onClick: () => handleActive(1, 0),
         },
         {
             id: "you-2",
@@ -42,7 +38,7 @@ export const MenuYou = () => {
             icon: <PiUserSquareBold />,
             iconInactive: <PiUserSquare />,
             active: active[1],
-            onClick: () => handleActive(1),
+            onClick: () => handleActive(1, 1),
         },
         {
             id: "you-3",
@@ -50,7 +46,7 @@ export const MenuYou = () => {
             icon: <GoHistory className="font-bold" />,
             iconInactive: <GoHistory />,
             active: active[2],
-            onClick: () => handleActive(2),
+            onClick: () => handleActive(1, 2),
         },
         {
             id: "you-4",
@@ -58,7 +54,7 @@ export const MenuYou = () => {
             icon: <MdPlaylistPlay />,
             iconInactive: <MdOutlinePlaylistPlay />,
             active: active[3],
-            onClick: () => handleActive(3),
+            onClick: () => handleActive(1, 3),
         },
         {
             id: "you-5",
@@ -66,7 +62,7 @@ export const MenuYou = () => {
             icon: <CgPlayButtonR />,
             iconInactive: <CgPlayButtonR />,
             active: active[4],
-            onClick: () => handleActive(4),
+            onClick: () => handleActive(1, 4),
         },
         {
             id: "you-6",
@@ -74,7 +70,7 @@ export const MenuYou = () => {
             icon: <BiSolidMoviePlay />,
             iconInactive: <BiMoviePlay />,
             active: active[5],
-            onClick: () => handleActive(5),
+            onClick: () => handleActive(1, 5),
         },
         {
             id: "you-7",
@@ -82,7 +78,7 @@ export const MenuYou = () => {
             icon: <MdWatchLater />,
             iconInactive: <MdOutlineWatchLater />,
             active: active[6],
-            onClick: () => handleActive(6),
+            onClick: () => handleActive(1, 6),
         },
         {
             id: "you-8",
@@ -90,7 +86,7 @@ export const MenuYou = () => {
             icon: <RiThumbUpFill />,
             iconInactive: <RiThumbUpLine />,
             active: active[7],
-            onClick: () => handleActive(7),
+            onClick: () => handleActive(1, 7),
         },
     ]
     return <Menu items={menuItems} />

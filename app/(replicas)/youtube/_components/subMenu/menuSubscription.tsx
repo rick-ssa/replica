@@ -2,7 +2,15 @@ import { Avatar } from "../avatar"
 import { ItemMenu, Menu } from "../menu/menu"
 import { FiRadio } from "react-icons/fi"
 
-export const MenuSubscription = ({ users }: { users: any }) => {
+export const MenuSubscription = ({
+    active,
+    handleActive,
+    users,
+}: {
+    active: boolean[]
+    handleActive: (arrayIndex: number, index: number) => void
+    users: any
+}) => {
     const items: ItemMenu[] = users.map(
         (user: any, index: number): ItemMenu => {
             let Text
@@ -48,6 +56,8 @@ export const MenuSubscription = ({ users }: { users: any }) => {
                         alt={user.name.first}
                     />
                 ),
+                active: active[index],
+                onClick: () => handleActive(2, index),
             }
         }
     )

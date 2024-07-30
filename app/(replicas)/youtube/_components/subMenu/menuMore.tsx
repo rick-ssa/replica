@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { ItemMenu, Menu } from "../menu/menu"
 import {
     SiYoutube,
@@ -9,17 +8,13 @@ import {
     SiYoutubestudio,
 } from "react-icons/si"
 
-export const MenuMore = () => {
-    const [active, setActive] = useState<boolean[]>(new Array(4).fill(false))
-
-    const handleActive = (index: number) => {
-        const newActive = active.map(
-            (_, dispatchIndex) => dispatchIndex === index
-        )
-
-        setActive(newActive)
-    }
-
+export const MenuMore = ({
+    active,
+    handleActive,
+}: {
+    active: boolean[]
+    handleActive: (arrayIndex: number, index: number) => void
+}) => {
     const menuItems: ItemMenu[] = [
         {
             id: "more-1",
@@ -27,7 +22,7 @@ export const MenuMore = () => {
             icon: <SiYoutube color="red" />,
             iconInactive: <SiYoutube color="red" />,
             active: active[0],
-            onClick: () => handleActive(0),
+            onClick: () => handleActive(4, 0),
         },
         {
             id: "more-2",
@@ -35,7 +30,7 @@ export const MenuMore = () => {
             icon: <SiYoutubestudio color="red" />,
             iconInactive: <SiYoutubestudio color="red" />,
             active: active[1],
-            onClick: () => handleActive(1),
+            onClick: () => handleActive(4, 1),
         },
         {
             id: "more-3",
@@ -43,7 +38,7 @@ export const MenuMore = () => {
             icon: <SiYoutubemusic color="red" />,
             iconInactive: <SiYoutubemusic color="red" />,
             active: active[2],
-            onClick: () => handleActive(2),
+            onClick: () => handleActive(4, 2),
         },
         {
             id: "more-4",
@@ -51,7 +46,7 @@ export const MenuMore = () => {
             icon: <SiYoutubekids color="red" />,
             iconInactive: <SiYoutubekids color="red" />,
             active: active[3],
-            onClick: () => handleActive(3),
+            onClick: () => handleActive(4, 3),
         },
     ]
     return <Menu items={menuItems} title="more from youtube" />

@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { ItemMenu, Menu } from "../menu/menu"
 import { RiFeedbackFill, RiFeedbackLine } from "react-icons/ri"
 import {
@@ -12,17 +11,13 @@ import {
     IoHelpCircleOutline,
 } from "react-icons/io5"
 
-export const MenuConfig = () => {
-    const [active, setActive] = useState<boolean[]>(new Array(4).fill(false))
-
-    const handleActive = (index: number) => {
-        const newActive = active.map(
-            (_, dispatchIndex) => dispatchIndex === index
-        )
-
-        setActive(newActive)
-    }
-
+export const MenuConfig = ({
+    active,
+    handleActive,
+}: {
+    active: boolean[]
+    handleActive: (arrayIndex: number, index: number) => void
+}) => {
     const menuItems: ItemMenu[] = [
         {
             id: "config-1",
@@ -30,7 +25,7 @@ export const MenuConfig = () => {
             icon: <IoSettings />,
             iconInactive: <IoSettingsOutline />,
             active: active[0],
-            onClick: () => handleActive(0),
+            onClick: () => handleActive(5, 0),
         },
         {
             id: "config-2",
@@ -38,7 +33,7 @@ export const MenuConfig = () => {
             icon: <IoFlagSharp />,
             iconInactive: <IoFlagOutline />,
             active: active[1],
-            onClick: () => handleActive(1),
+            onClick: () => handleActive(5, 1),
         },
         {
             id: "config-3",
@@ -46,7 +41,7 @@ export const MenuConfig = () => {
             icon: <IoHelpCircle />,
             iconInactive: <IoHelpCircleOutline />,
             active: active[2],
-            onClick: () => handleActive(2),
+            onClick: () => handleActive(5, 2),
         },
         {
             id: "config-4",
@@ -54,7 +49,7 @@ export const MenuConfig = () => {
             icon: <RiFeedbackFill />,
             iconInactive: <RiFeedbackLine />,
             active: active[3],
-            onClick: () => handleActive(3),
+            onClick: () => handleActive(5, 3),
         },
     ]
     return <Menu items={menuItems} />
