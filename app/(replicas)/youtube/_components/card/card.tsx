@@ -1,12 +1,11 @@
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import { Avatar } from "../avatar"
-import picExemple from "@/app/_assets/medium-shot-woman-living-farmhouse.jpg"
 import { HiOutlineDotsVertical } from "react-icons/hi"
-export const Card = () => {
+export const Card = ({ image }: { image: StaticImageData | string }) => {
     return (
         <div className="flex flex-col gap-3 flex-1 min-w-[170px]">
             <div className=" rounded-xl overflow-hidden flex-1">
-                <Image src={picExemple} alt="" />
+                <Image src={image} alt="" />
             </div>
             <div className="flex gap-3">
                 <div>
