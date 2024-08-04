@@ -31,7 +31,7 @@ export const YoutubeShortMenu = ({
             <ShortMenuItem
                 icon={<MdSubscriptions />}
                 inactiveIcon={<MdOutlineSubscriptions />}
-                text="Subscriptions "
+                text="Inscriptions"
                 active={activeArray[2]}
             />
             <ShortMenuItem

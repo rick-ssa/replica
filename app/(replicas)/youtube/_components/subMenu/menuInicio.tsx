@@ -13,7 +13,7 @@ export const MenuInicio = ({
     const menuItems: ItemMenu[] = [
         {
             id: "home-1",
-            text: "home",
+            text: "beginning",
             icon: <GoHomeFill />,
             iconInactive: <GoHome />,
             active: active[0],
@@ -29,7 +29,7 @@ export const MenuInicio = ({
         },
         {
             id: "home-3",
-            text: "subscriptions",
+            text: "inscriptions",
             icon: <MdSubscriptions />,
             iconInactive: <MdOutlineSubscriptions />,
             active: active[2],
